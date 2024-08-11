@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=v, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+.container {
+  width: 80%;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#blinking-text {
+  font-size: 36px;
+  font-weight: bold;
+  color: #8a1010;
+}
+        </style>
+
+        <script>
+            const blinkingText = document.getElementById('blinking-text');
+
+// array of colors to blink through
+const colors = ['#FF69B4', '#33CC33', '#6666FF', '#FFCC00', '#0099CC'];
+
+// blink interval
+const blinkInterval = 500; // 500ms = 0.5s
+
+// current color index
+let colorIndex = 0;
+
+// blink function
+function blink() {
+  blinkingText.style.color = colors[colorIndex];
+  colorIndex = (colorIndex + 1) % colors.length; // cycle through colors
+  setTimeout(blink, blinkInterval);
+}
+
+// start blinking
+blink();
+            </Script>
+</head>
+
+
+<body>
+    <div class="container">
+       <marquee><h2 id="blinking-text">Thank you for ordering</h2></marquee> 
+      </div>
+</body>
+</html>

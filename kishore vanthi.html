@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple Web Page</title>
+	<style>
+		/* Global Styles */
+		body {
+			font-family: 'Open Sans', sans-serif;
+			margin: 0;
+			padding: 0;
+			background-color: #f9f9f9;
+		}
+		
+		/* Container Styles */
+		.container {
+			max-width: 800px;
+			margin: 40px auto;
+			padding: 20px;
+			background-color: #fff;
+			border: 1px solid #ddd;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+		
+		/* Heading Styles */
+		h1 {
+			font-size: 36px;
+			color: #333;
+			margin-bottom: 20px;
+			text-align: center;
+		}
+		
+		/* Image Styles */
+		img {
+			width: 200px;
+			height: 200px;
+			margin: 20px;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+		}
+		
+		/* Description Styles */
+		.description {
+			font-size: 18px;
+			color: #666;
+			margin-bottom: 20px;
+			text-align: center;
+		}
+		
+		/* Team Members Styles */
+		.team-members {
+			margin-top: 40px;
+			text-align: center;
+		}
+		
+		.team-members ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+		
+		.team-members li {
+			display: inline-block;
+			margin-right: 20px;
+		}
+		
+		.team-members li:last-child {
+			margin-right: 0;
+		}
+
+		.team-members {
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-top: 1px solid #ddd;
+}
+
+.team-members ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.team-members li {
+  margin: 20px;
+  width: 200px;
+  text-align: center;
+}
+
+.team-members img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.team-members h3 {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.team-members p {
+  font-size: 16px;
+  color: #666;
+}
+
+.team-members li:hover {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+  transition: all 0.3s ease-in-out;
+}
+
+.team-members li:hover img {
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.team-members li:hover h3 {
+  color: #333;
+  transition: all 0.3s ease-in-out;
+}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Welcome to Our Team</h1>
+		
+		<img src="th.jpeg" alt="Image 1">
+		<p class="description">This is a description of image 1.</p>
+		
+		<img src="OIP.jpeg" alt="Image 2">
+		<p class="description">This is a description of image 2.</p>
+		
+		<div class="team-members">
+			<h2>Team Members</h2>
+			<ul>
+				<li>John Doe</li>
+				<li>Jane Smith</li>
+				<li>Bob Johnson</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
