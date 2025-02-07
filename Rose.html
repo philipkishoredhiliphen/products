@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Rose Day My Love</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            font-family: 'Poppins', sans-serif;
+            flex-direction: column;
+            overflow: hidden;
+            position: relative;
+        }
+        .envelope {
+            width: 150px;
+            height: 100px;
+            background: #ffcccb;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: transform 1s ease-in-out;
+        }
+        .envelope::before, .envelope::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+        .envelope::before {
+            top: 0;
+            left: 0;
+            border-width: 50px 75px 0 75px;
+            border-color: #ff9999 transparent transparent transparent;
+        }
+        .envelope::after {
+            bottom: 0;
+            left: 0;
+            border-width: 50px 75px 50px 75px;
+            border-color: transparent transparent #ff9999 transparent;
+        }
+        .message {
+            display: none;
+            color: white;
+            font-size: 3rem;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: scale(0.8); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+        .rose {
+            position: absolute;
+            bottom: 0;
+            width: 50px;
+            height: 50px;
+            background: url('https://cdn-icons-png.flaticon.com/512/2913/2913990.png') no-repeat center/contain;
+            animation: floatUp 5s linear infinite;
+        }
+        @keyframes floatUp {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="envelope" onclick="openEnvelope()"></div>
+    <h1 class="message">Happy Rose Day My Love! 🌹</h1>
+    <script>
+        function openEnvelope() {
+            document.querySelector('.envelope').style.transform = 'scale(0)';
+            setTimeout(() => {
+                document.querySelector('.message').style.display = 'block';
+            }, 1000);
+        }
+        function createRose() {
+            const rose = document.createElement("div");
+            rose.classList.add("rose");
+            rose.style.left = Math.random() * 100 + "vw";
+            rose.style.animationDuration = Math.random() * 3 + 3 + "s";
+            document.body.appendChild(rose);
+            setTimeout(() => {
+                rose.remove();
+            }, 5000);
+        }
+        setInterval(createRose, 400);
+    </script>
+</body>
+</html>
